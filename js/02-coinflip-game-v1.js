@@ -24,12 +24,26 @@ The flip was tails but you chose heads...you lose!
 The flip was tails and you chose tails...you win!
 */
 
-let coinflip = Math.round(Math.random()), choice = prompt('Heads or Tails')
 
-if (choice < .5) {
-    flip = 'heads'
+let coinFlip = Math.round(Math.random()) 
+let choice = prompt('Heads or Tails').toLowerCase()
+
+if (coinFlip == 0) {
+    if (choice == 'heads') {
+        alert('The flip was heads and you chose heads...you win!')
+    } else if (choice == 'tails') {
+        alert('The flip was heads but you chose tails...you lose!')
+    } else {
+        alert('Please make a valid choice, heads or tails')
+    }
 } else {
-    flip = 'tails'
+    if (choice == 'tails') {
+        alert('The flip was tails and you chose tails...you win!')
+    } else if (choice == 'heads') {
+        alert('The flip was tails but you chose heads...you lose!')
+    } else {
+        alert('Please make a valid choice, heads or tails')
+    }
 }
 
 
